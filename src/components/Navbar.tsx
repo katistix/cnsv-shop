@@ -28,14 +28,13 @@ export function Navbar() {
                         setIsCartShown(false);
                     }}
                     className="ml-4 cursor-pointer">
-                    <div className="hover:rotate-180 duration-500">🛒</div>
+                    <div className="hover:-rotate-180 duration-500">🛒</div>
                     {/* cart drop menu */}
                     <div
-                        className={`bg-red-400 duration-500 py-4 absolute right-0 top-12 w-36 max-h-[50vh] ${
-                            isCartShown
+                        className={`bg-red-400 duration-500 py-4 absolute right-0 top-12 w-36 max-h-[50vh] ${isCartShown
                                 ? "translate-y-0"
                                 : " translate-y-[-50vh] delay-500"
-                        }`}>
+                            }`}>
                         cart
                     </div>
                 </div>
