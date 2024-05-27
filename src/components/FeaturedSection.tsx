@@ -8,24 +8,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
-
-const produse = [
-    "otrava de sobolani",
-    "caiet A4",
-    "pix",
-    "laptop",
-    "telefon",
-    "masina",
-    "bicicleta",
-    "papuci",
-    "ochelari",
-    "pantaloni",
-    "tricou",
-    "palarie",
-    "ceas",
-    "bratara",
-    "cercei",
-]
+import { produse } from "@/products"
 
 
 
@@ -40,16 +23,13 @@ export function FeaturedSection() {
                 {produse.map((produs, index) => {
                     return (
                         <CarouselItem key={index} className="basis-1/5">
-                            <a href={"/product/" + produs}>
+                            <a href={"/product/" + produs.id}>
                                 <Card>
                                     <CardContent className="flex aspect-square">
-                                        {produs}
+                                        {produs.name} {produs.price} ROBUX
                                     </CardContent>
                                 </Card>
                             </a>
-
-
-
                         </CarouselItem>
                     )
                 })}
