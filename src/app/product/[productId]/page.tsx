@@ -23,9 +23,9 @@ function Page(props: Props) {
     }
 
     return (
-        <div>
+        <div className="p-8">
             <h1 className="text-3xl"> Pagina produs</h1>
-            {product.name} {product.price}
+            {product.name} {product.price} ROBUX
             <AddToCartBtn itemId={product.id} />
         </div>
     )
